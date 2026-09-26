@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<dimrConfig xmlns="http://schemas.deltares.nl/dimr"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://schemas.deltares.nl/dimr http://content.oss.deltares.nl/schemas/dimr-1.2.xsd">
+  <documentation>
+    <fileVersion>1.2</fileVersion>
+    <createdBy>JalRaksha</createdBy>
+  </documentation>
+  <control>
+    <start name="westernscheldt12" />
+  </control>
+  <component name="westernscheldt12">
+    <library>dflowfm</library>
+    <workingDir>dflowfm</workingDir>
+    <inputFile>westernscheldt12.mdu</inputFile>
+  </component>
+</dimrConfig>

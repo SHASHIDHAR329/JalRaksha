@@ -1,0 +1,12 @@
+     1     1   *** begin external enclosure 
+    17     1
+    17    38
+     9    38
+     9    17
+     1    17
+     1     1   *** end external grid enclosure
+     6     6   *** begin internal grid enclosure   1
+    11     6
+    11    12
+     6    12
+     6     6   *** end internal grid enclosure   1

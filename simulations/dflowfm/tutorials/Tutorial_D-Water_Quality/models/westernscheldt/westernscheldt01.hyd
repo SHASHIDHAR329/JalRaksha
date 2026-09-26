@@ -1,0 +1,52 @@
+file-created-by  Deltares, D-Flow FM Version 1.2.63.64757M, Aug 28 2019, 20:48:01
+file-creation-date  2019-09-18, 15:20:03
+task      full-coupling
+geometry  unstructured
+horizontal-aggregation no
+reference-time              '20010101000000'
+hydrodynamic-start-time     '20140101000000'
+hydrodynamic-stop-time      '20140108000000'
+hydrodynamic-timestep       '00000000010000'
+conversion-ref-time         '20010101000000'
+conversion-start-time       '20140101000000'
+conversion-stop-time        '20140108000000'
+conversion-timestep         '00000000010000'
+grid-cells-first-direction                    8355
+grid-cells-second-direction                      1
+number-hydrodynamic-segments-per-layer        8355
+number-hydrodynamic-layers                       1
+number-water-quality-segments-per-layer       8355
+number-water-quality-layers                      1
+number-horizontal-exchanges                  16071
+number-vertical-exchanges                        0
+hydrodynamic-file           'westernscheldt01'
+aggregation-file            none
+vertical-aggregation-file   none
+boundaries-file             'westernscheldt01.bnd'
+waqgeom-file                'westernscheldt01_waqgeom.nc'
+grid-indices-file           'westernscheldt01.bnd'
+grid-coordinates-file       'westernscheldt01_waqgeom.nc'
+volumes-file                'westernscheldt01.vol'
+areas-file                  'westernscheldt01.are'
+flows-file                  'westernscheldt01.flo'
+velocities-file             'westernscheldt01.vel'
+pointers-file               'westernscheldt01.poi'
+lengths-file                'westernscheldt01.len'
+salinity-file               none
+temperature-file            none
+vert-diffusion-file         none
+horizontal-surfaces-file    'westernscheldt01.srf'
+surfaces-file               'westernscheldt01.srfold'
+shear-stresses-file         'westernscheldt01.tau'
+attributes-file             'westernscheldt01.atr'
+hydrodynamic-layers
+       1.000000
+end-hydrodynamic-layers
+water-quality-layers
+       1.000000
+end-water-quality-layers
+sink-sources
+         1       -45      1561       -999.000000       -999.000000      35683.752114     386610.549147  Vlissingen
+         2       -46      4103       -999.000000       -999.000000      59311.003437     384346.024300  Hansweert
+         3       -47      6890       -999.000000       -999.000000      45297.857761     373702.166625  Terneuzen
+end-sink-sources

@@ -1,0 +1,14 @@
+
+[boundary]
+quantity=waterlevelbnd
+locationfile=boundary_conditions/open_boundaries_simple.pli
+forcingfile=boundary_conditions/open_boundaries_simple.bc
+return_time=0.0000000e+000
+
+[boundary]
+quantity=salinitybnd
+locationfile=boundary_conditions/open_boundaries_simple.pli
+forcingfile=boundary_conditions/salinity_open_boundaries_simple.bc
+return_time=0.0000000e+000
+
+

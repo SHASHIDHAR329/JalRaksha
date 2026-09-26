@@ -1,0 +1,60 @@
+﻿# ============================================================
+# JalRaksha Git Ignore
+# ============================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Generated model / simulation outputs
+outputs/
+
+# SAR imagery / large geospatial rasters
+inputs/sar/*.tif
+inputs/sar/*.tiff
+inputs/sar/*.jp2
+inputs/sar/*.zip
+
+# Large generated simulation files inside simulations
+simulations/**/output/
+simulations/**/outputs/
+simulations/**/data/
+simulations/**/*.bi4
+simulations/**/*.vtk
+simulations/**/*.vtu
+simulations/**/*.pvtu
+simulations/**/*.out
+simulations/**/*.log
+simulations/**/*.rst
+simulations/**/*.his
+simulations/**/*.map
+simulations/**/*.dia
+
+# Generated NetCDF/results
+simulations/**/*.nc
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Editor/local files
+.vscode/*.log
+
+# Local backup archives
+*.zip
+*.7z
+*.rar

@@ -1,0 +1,37 @@
+JAL RAKSHA - PROJECT STATE
+
+Working project:
+C:\JalRaksha
+
+Python environment:
+C:\Users\shash\miniconda3\envs\jalraksha
+
+DualSPHysics:
+C:\Users\shash\OneDrive\Desktop\JAL RAKSHA\DualSPHysics_v5.4.3\DualSPHysics_v5.4
+
+Completed:
+1. Miniconda installed
+2. Python 3.11 environment created
+3. NVIDIA RTX 3050 detected
+4. PyTorch GPU verified
+5. NeuralOperator/FNO import verified
+6. DualSPHysics v5.4.3 extracted
+7. Built-in 2D dam-break GPU example completed successfully
+8. Python successfully launched DualSPHysics
+9. SPH output copied to JalRaksha
+10. SPH post-processing script completed
+11. FlowTool completed successfully
+12. Tank flow diagnostic CSV created
+
+Important output:
+C:\JalRaksha\outputs\sph\processed\velocity_timeseries.csv
+C:\JalRaksha\outputs\sph\processed\water_surface_x02.csv
+C:\JalRaksha\outputs\sph\processed\water_surface_z003.csv
+C:\JalRaksha\outputs\sph\processed\flowtool.csv
+C:\JalRaksha\outputs\sph\processed\tank_flow_diagnostic.csv
+
+Current next milestone:
+Create a properly defined SPH control section and extract a scientifically appropriate Q(t) hydrograph.
+Then integrate Q(t) with D-Flow FM.
+
+Do not reinstall the software unless a future error specifically requires it.

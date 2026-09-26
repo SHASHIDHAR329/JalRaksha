@@ -1,0 +1,120 @@
+[forcing]
+name              = SeaBoundary01_0001
+function          = astronomic
+quantity          = astronomic component
+unit              = -
+quantity          = waterlevelbnd amplitude
+unit              = m
+quantity          = waterlevelbnd phase
+unit              = deg
+A0  0.5  0
+M2  2    0
+
+[forcing]
+name              = SeaBoundary01_0002
+function          = astronomic
+quantity          = astronomic component
+unit              = -
+quantity          = waterlevelbnd amplitude
+unit              = m
+quantity          = waterlevelbnd phase
+unit              = deg
+A0  0.5  0
+M2  2    0
+
+[forcing]
+name              = SeaBoundary01_0003
+function          = astronomic
+quantity          = astronomic component
+unit              = -
+quantity          = waterlevelbnd amplitude
+unit              = m
+quantity          = waterlevelbnd phase
+unit              = deg
+A0  0.5  0
+M2  2    0
+
+[forcing]
+name              = SeaBoundary01_0004
+function          = astronomic
+quantity          = astronomic component
+unit              = -
+quantity          = waterlevelbnd amplitude
+unit              = m
+quantity          = waterlevelbnd phase
+unit              = deg
+A0  0.5  0
+M2  2    0
+
+[forcing]
+name              = SeaBoundary01_0005
+function          = astronomic
+quantity          = astronomic component
+unit              = -
+quantity          = waterlevelbnd amplitude
+unit              = m
+quantity          = waterlevelbnd phase
+unit              = deg
+A0  0.5  0
+M2  2    0
+
+[forcing]
+name              = SeaBoundary01_0006
+function          = astronomic
+quantity          = astronomic component
+unit              = -
+quantity          = waterlevelbnd amplitude
+unit              = m
+quantity          = waterlevelbnd phase
+unit              = deg
+A0  0.5  0
+M2  2    0
+
+[forcing]
+name              = SeaBoundary01_0007
+function          = astronomic
+quantity          = astronomic component
+unit              = -
+quantity          = waterlevelbnd amplitude
+unit              = m
+quantity          = waterlevelbnd phase
+unit              = deg
+A0  0.5  0
+M2  2    0
+
+[forcing]
+name              = SeaBoundary01_0008
+function          = astronomic
+quantity          = astronomic component
+unit              = -
+quantity          = waterlevelbnd amplitude
+unit              = m
+quantity          = waterlevelbnd phase
+unit              = deg
+A0  0.5  0
+M2  2    0
+
+[forcing]
+name              = SeaBoundary01_0009
+function          = astronomic
+quantity          = astronomic component
+unit              = -
+quantity          = waterlevelbnd amplitude
+unit              = m
+quantity          = waterlevelbnd phase
+unit              = deg
+A0  0.5  0
+M2  2    0
+
+[forcing]
+name              = SeaBoundary01_0010
+function          = astronomic
+quantity          = astronomic component
+unit              = -
+quantity          = waterlevelbnd amplitude
+unit              = m
+quantity          = waterlevelbnd phase
+unit              = deg
+A0  0.5  0
+M2  2    0
+

@@ -1,0 +1,17 @@
+[
+  {
+    "SourceModelName": "FlowFM",
+    "TargetModelName": "Real-Time Control",
+    "Exchanges": []
+  },
+  {
+    "SourceModelName": "Real-Time Control",
+    "TargetModelName": "FlowFM",
+    "Exchanges": [
+      {
+        "SourceName": "Control Group 1.output0",
+        "TargetName": "Kering.CrestLevel"
+      }
+    ]
+  }
+]

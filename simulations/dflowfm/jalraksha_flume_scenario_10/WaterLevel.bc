@@ -1,0 +1,11 @@
+[forcing]
+Name                            = watlev_bnd_0001
+Function                        = harmonic
+Quantity                        = harmonic component
+Unit                            = minutes
+Quantity                        = waterlevelbnd amplitude
+Unit                            = m
+Quantity                        = waterlevelbnd phase
+Unit                            = deg
+10  0.0075  90
+

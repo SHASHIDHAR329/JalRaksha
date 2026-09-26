@@ -1,0 +1,42 @@
+[forcing]
+Name                            = watlev_bnd_0001
+Function                        = timeseries
+Time-interpolation              = linear
+Vertical position type          = single
+Vertical interpolation          = linear
+Quantity                        = time
+Unit                            = seconds since 1992-09-01 00:00:00
+Quantity                        = salinitybnd
+Unit                            = ppt
+Vertical position               = 1
+0     12.5
+6000  12.5
+
+[forcing]
+Name                            = watlev_bnd_0002
+Function                        = timeseries
+Time-interpolation              = linear
+Vertical position type          = single
+Vertical interpolation          = linear
+Quantity                        = time
+Unit                            = seconds since 1992-09-01 00:00:00
+Quantity                        = salinitybnd
+Unit                            = ppt
+Vertical position               = 1
+0     12.5
+6000  12.5
+
+[forcing]
+Name                            = discharge_bnd_0001
+Function                        = timeseries
+Time-interpolation              = linear
+Vertical position type          = single
+Vertical interpolation          = linear
+Quantity                        = time
+Unit                            = seconds since 1992-09-01 00:00:00
+Quantity                        = salinitybnd
+Unit                            = ppt
+Vertical position               = 1
+0     0
+6000  0
+

@@ -1,0 +1,11 @@
+[forcing]
+Name                            = Boundary02_0001
+Function                        = timeseries
+Time-interpolation              = linear
+Quantity                        = time
+Unit                            = seconds since 2001-01-01 00:00:00
+Quantity                        = dischargebnd
+Unit                            = m3/s
+410227200  2500
+410313600  2500
+

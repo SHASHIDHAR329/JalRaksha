@@ -1,0 +1,24 @@
+[forcing]
+Name                            = Boundary01_0010
+Function                        = astronomic
+Quantity                        = astronomic component
+Unit                            = -
+Quantity                        = waterlevelbnd amplitude
+Unit                            = m
+Quantity                        = waterlevelbnd phase
+Unit                            = deg
+A0  0.5  0
+M2  2    0
+
+[forcing]
+Name                            = Boundary01_0001
+Function                        = astronomic
+Quantity                        = astronomic component
+Unit                            = -
+Quantity                        = waterlevelbnd amplitude
+Unit                            = m
+Quantity                        = waterlevelbnd phase
+Unit                            = deg
+A0  0.5  0
+M2  2    0
+

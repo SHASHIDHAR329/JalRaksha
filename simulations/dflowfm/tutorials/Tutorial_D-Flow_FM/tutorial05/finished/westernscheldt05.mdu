@@ -1,0 +1,131 @@
+# Generated on 10/23/2014 13:28:48
+# Deltares, FM-Suite DFlowFM Model Version 1.0.0.0, DFlow FM Version 1.1.116.36329
+
+[model]
+Program           = D-Flow FM
+Version           = 1.1.116.36329
+GuiVersion        = 1.0.0.0
+AutoStart         = 0
+
+[geometry]
+NetFile           = westernscheldt04_net.nc
+BathymetryFile    =
+WaterLevIniFile   =
+LandBoundaryFile  = sealand.ldb
+ThinDamFile       =
+ThindykeFile      =
+StructureFile     =
+ProflocFile       =
+ProfdefFile       =
+ManholeFile       =
+WaterLevIni       = 0
+Bedlevuni         = -5
+Bedslope          = 0
+BedlevType        = 3
+PartitionFile     =
+AngLat            = 0
+Conveyance2D      = 3
+Sillheightmin     = 0.5
+Makeorthocenters  = 0
+Dcenterinside     = 1
+Kmx               = 0
+
+[numerics]
+CFLWaveFrac       = 0.1
+AdvecType         = 3
+Limtyphu          = 0
+Limtypmom         = 4
+Limtypsa          = 4
+Icgsolver         = 4
+Maxdegree         = 6
+Thindykescheme    = 1
+Thindykecontraction= 1
+Izbndpos          = 0
+Tlfsmo            = 0
+Lincontin         = 0
+Jaembed1D         = 0
+Slopedrop2D       = 0
+Chkadvd           = 0.1
+Teta0             = 0.55
+Jbasqbnddownwindhs= 0
+Maxitverticalforester= 0
+CFLMax            = 0.7
+
+[physics]
+Ag                = 9.81
+Rhomean           = 1000
+UnifFrictCoef     = 0.023
+UnifFrictType     = 1
+UnifFrictCoefLin  = 0
+Umodlin           = 1
+Vicouv            = 0
+Dicouv            = 0
+Vicoww            = 0
+Dicoww            = 0
+Smagorinsky       = 0
+Elder             = 0
+irov              = 0
+wall_ks           = 0
+TidalForcing      = 0
+Salinity          = 0
+InitialSalinity   = 0
+Temperature       = 0
+InitialTemperature= 5
+Secchidepth       = 2
+Stanton           = 0.0013
+Dalton            = 0.0013
+
+[wind]
+ICdtyp            = 2
+Cdbreakpoints     = 0.00063 0.00723
+Windspeedbreakpoints= 0 100
+Rhoair            = 1.2
+PavBnd            = 101325
+Gapres            = 101325
+
+[waves]
+Wavemodelnr       = 0
+WaveNikuradse     = 0.01
+Rouwav            = FR84
+
+[time]
+RefDate           = 20010101
+Tunit             = S
+TStart            = 0
+TStop             = 8640000
+AutoTimestep      = 1
+DtUser            = 300
+DtMax             = 30
+DtInit            = 1
+
+[restart]
+RestartFile       =
+RestartDateTime   = 20141016
+
+[external forcing]
+ExtForceFile      =
+ExtForceFileNew   = Water_Flow_FM_Model_bnd.ext
+
+[output]
+MapFormat         = 1
+OutputDir         =
+ObsFile           =
+CrsFile           =
+HisInterval       = 120
+XLSInterval       = 10
+FlowGeomFile      =
+MapInterval       = 1200
+RstInterval       =
+S1incinterval     =
+WaqInterval       =
+StatsInterval     =
+TimingsInterval   =
+MapOutputTimeVector=
+Writebalancefile  = 0
+FullGridOutput    = 0
+
+[trachytopes]
+TrtRou            = N
+TrtDef            =
+TrtL              =
+TrtDt             = 60

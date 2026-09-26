@@ -1,0 +1,47 @@
+file-created-by  Deltares, D-Flow FM Version 1.2.184.49d9c9bb45cf850b7016b9c54e69151de53143b0, Apr 16 2025, 13:26:11
+file-creation-date  2025-05-08, 14:38:33                                        
+task      full-coupling
+geometry  unstructured
+horizontal-aggregation no
+reference-time              '19900805000000'
+hydrodynamic-start-time     '19900805000000'
+hydrodynamic-stop-time      '19900806010000'
+hydrodynamic-timestep       '00000000000500'
+conversion-ref-time         '19900805000000'
+conversion-start-time       '19900805000000'
+conversion-stop-time        '19900806010000'
+conversion-timestep         '00000000000500'
+grid-cells-first-direction                     222
+grid-cells-second-direction                      1
+number-hydrodynamic-segments-per-layer         222
+number-hydrodynamic-layers                       1
+number-water-quality-segments-per-layer        222
+number-water-quality-layers                      1
+number-horizontal-exchanges                    415
+number-vertical-exchanges                        0
+hydrodynamic-file           'f34'
+aggregation-file            none
+vertical-aggregation-file   none
+boundaries-file             'f34.bnd'
+waqgeom-file                'f34_waqgeom.nc'
+grid-indices-file           'f34.bnd'
+grid-coordinates-file       'f34_waqgeom.nc'
+volumes-file                'f34.vol'
+areas-file                  'f34.are'
+flows-file                  'f34.flo'
+velocities-file             'f34.vel'
+pointers-file               'f34.poi'
+lengths-file                'f34.len'
+salinity-file               none
+temperature-file            none
+vert-diffusion-file         none
+horizontal-surfaces-file    'f34.srf'
+surfaces-file               'f34.srfold'
+shear-stresses-file         'f34.tau'
+attributes-file             'f34.atr'
+hydrodynamic-layers
+       1.000000
+end-hydrodynamic-layers
+water-quality-layers   
+       1.000000
+end-water-quality-layers

@@ -1,0 +1,11 @@
+[boundary]
+quantity=dischargebnd
+locationfile=boundary_conditions/JalRakshaInlet.pli
+forcingfile=boundary_conditions/JalRakshaInlet.bc
+return_time=0.0000000e+000
+
+[boundary]
+quantity=waterlevelbnd
+locationfile=boundary_conditions/JalRakshaOutlet.pli
+forcingfile=boundary_conditions/JalRakshaOutlet.bc
+return_time=0.0000000e+000

@@ -1,0 +1,5 @@
+left.grd      5    61     5    65  top.grd       1     1     1     5
+bot.grd       1    28    10    28  right.grd     6     1     9     1
+left.grd      5    14     5    18  right.grd     1     1     1     5
+left.grd      5    25     5    29  right.grd     1    12     1    16
+top.grd       9     1     9     5  right.grd     9    30     9    31

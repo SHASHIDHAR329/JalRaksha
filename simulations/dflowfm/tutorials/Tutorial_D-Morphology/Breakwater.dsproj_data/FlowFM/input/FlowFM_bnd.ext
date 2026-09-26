@@ -1,0 +1,15 @@
+
+[boundary]
+quantity=waterlevelbnd
+locationfile=Boundary01.pli
+forcingfile=WaterLevel.bc
+
+[boundary]
+quantity=neumannbnd
+locationfile=Boundary02.pli
+forcingfile=Neumann.bc
+
+[boundary]
+quantity=neumannbnd
+locationfile=Boundary03.pli
+forcingfile=Neumann.bc
