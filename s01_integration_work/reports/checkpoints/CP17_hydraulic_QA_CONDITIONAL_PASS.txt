@@ -1,0 +1,32 @@
+JalRaksha Hirakud Integration
+CP-17 HYDRAULIC QA CHECKPOINT
+
+STATUS: CONDITIONAL PASS
+
+S01:
+- 24 h D-Flow FM computation completed.
+- Setbacks = 0.
+- Timestep range = 1 s to 30 s.
+- Mean timestep = 14.9156 s.
+- Final volume error = 7.0466e-05 m3.
+- Maximum absolute volume error = 7.7141e-05 m3.
+- Source/sink contribution = 0.
+- Maximum water depth = 36.1437 m.
+- Maximum velocity = 24.9496 m/s.
+- Final maximum depth = 34.6597 m.
+- Final maximum velocity = 5.4904 m/s.
+- Depth NaNs = 0.
+- Velocity NaNs = 0.
+- Negative depth cells = 0.
+- Water-level NaNs are present in the map output and are retained as a data-quality/masking flag.
+- Maximum velocity occurs at simulation index 1, face 11886, with depth 1.1222 m.
+
+Qualification:
+- This is a numerical/hydraulic-output QA checkpoint.
+- It does not establish field validation or operational safety.
+- The 24.9496 m/s early-time velocity hotspot remains flagged for interpretation.
+- The current S01 forcing remains provisional and is not a DualSPHysics breach hydrograph.
+- The current FNO is a laboratory-trained model and is not claimed as Hirakud-validated.
+
+NEXT:
+Member-3 GIS integration and final data-interface work.

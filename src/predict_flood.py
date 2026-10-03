@@ -117,13 +117,22 @@ def predict_flood(
         ),
     }
 
-    for name, (vmin, vmax, value) in ranges.items():
+    out_of_domain = []
 
+    for name, (vmin, vmax, value) in ranges.items():
         if value < vmin or value > vmax:
-            print(
-                f"WARNING: {name}={value} is outside "
-                f"training range [{vmin}, {vmax}]."
+            out_of_domain.append(
+                f"{name}={value} outside [{vmin}, {vmax}]"
             )
+
+    if out_of_domain:
+        raise ValueError(
+            "FNO input blocked: scenario is outside the trained "
+            "laboratory/flume domain. "
+            + "; ".join(out_of_domain)
+            + ". Use D-Flow FM as the physics result; do not extrapolate "
+            "the current FNO model."
+        )
 
     # --------------------------------------------------------
     # Construct 7 input channels
@@ -382,3 +391,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

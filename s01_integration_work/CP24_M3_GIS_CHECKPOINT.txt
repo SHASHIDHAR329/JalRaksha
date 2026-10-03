@@ -1,0 +1,33 @@
+JalRaksha CP24-M3 — Member 3 GIS Integration
+
+Verified:
+- Member 3 GIS package copied into integration workspace
+- GIS/impact/trust/validation modules copied
+- Synthetic test flood-depth raster created
+- CRS: EPSG:4326
+- Grid: 100 x 100
+- Flood-depth range: 0.0 to 4.0 m
+- GIS pipeline executed successfully
+- Flood extent generated
+- Hazard map generated
+- Impact map generated
+- Total pixels: 10,000
+- Flooded pixels: 1,200
+- Flooded percentage: 12.00%
+- Generated raster metadata verified
+- pipeline_flood_extent.tif: EPSG:4326, 100 x 100, values 0 to 1
+- pipeline_hazard.tif: EPSG:4326, 100 x 100, values 0 to 3
+- pipeline_impact.tif: EPSG:4326, 100 x 100, values 0 to 2
+- Input remains controlled synthetic/test data
+- Real Hirakud/Chiplima georeferenced GIS data not integrated
+- GIS prototype layer integrated into Scenario Monitor
+- Flood extent, Hazard and Impact layers available in dashboard
+- app.py py_compile passed
+- Dashboard GIS layer verified
+
+Scientific limitation:
+- The GIS layers are prototype/test outputs and must not be represented as verified Hirakud/Chiplima event geometry.
+- The 12.00% flooded-pixel figure applies only to the controlled synthetic test raster.
+
+Status:
+CP24-M3 GIS integration COMPLETE

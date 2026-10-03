@@ -1,0 +1,271 @@
+{
+  "case_id": "HIRAKUD_MAHANADI_MVP",
+  "manifest_version": "2.0",
+  "status": "scenario_definition_ready_hydraulic_inputs_pending",
+  "case": {
+    "dam": "Hirakud Dam",
+    "river": "Mahanadi",
+    "state": "Odisha",
+    "district": "Sambalpur"
+  },
+  "documented_hirakud_reference_values": {
+    "FRL_MWL_m": 192.024,
+    "MDDL_m": 179.83,
+    "spillway_capacity_m3s": 42450.0,
+    "accepted_PMF_peak_m3s": 69632.0
+  },
+  "domain": {
+    "primary": {
+      "name": "hirakud_to_chiplima",
+      "length_km": 28.29,
+      "geometry": "Data\\Processed\\River\\hirakud_to_chiplima_cwc_mainpath.geojson",
+      "CWC_parts": [
+        27,
+        25,
+        23
+      ],
+      "status": "primary_MVP_computational_candidate",
+      "note": "CWC geometry-based computational candidate. Final extent requires hydraulic sensitivity testing."
+    },
+    "short_sensitivity": {
+      "name": "candidate_10km",
+      "length_km": 10.0,
+      "geometry": "Data\\Processed\\River\\candidate_10km_downstream.geojson",
+      "status": "short_domain_sensitivity_case"
+    }
+  },
+  "scenarios": {
+    "S01": {
+      "name": "FRL fair-weather dam-break",
+      "category": "CWC_minimum_dam_failure_scenario",
+      "purpose": "Baseline fair-weather dam-failure case at the normal reservoir level.",
+      "domain": "hirakud_to_chiplima",
+      "domain_length_km": 28.29,
+      "initial_reservoir_level_m": 192.024,
+      "initial_reservoir_level_basis": "Hirakud FRL / MWL",
+      "breach": true,
+      "weather_condition": "fair_weather",
+      "design_flood": false,
+      "inflow_hydrograph": {
+        "status": "not_required_as_design_flood_input",
+        "note": "Actual solver treatment must be documented by the hydraulic team."
+      },
+      "breach_parameters": {
+        "status": "pending",
+        "required": true
+      },
+      "downstream_boundary": {
+        "status": "pending",
+        "required": true
+      },
+      "outputs": [
+        "water_depth",
+        "flow_velocity",
+        "arrival_time",
+        "flood_extent"
+      ]
+    },
+    "S02": {
+      "name": "PMF/IDF + MWL dam-break",
+      "category": "CWC_minimum_bad_weather_dam_failure_scenario",
+      "purpose": "Dam failure under adverse weather/design-flood conditions with the reservoir at MWL.",
+      "domain": "hirakud_to_chiplima",
+      "domain_length_km": 28.29,
+      "initial_reservoir_level_m": 192.024,
+      "initial_reservoir_level_basis": "Hirakud FRL / MWL",
+      "breach": true,
+      "weather_condition": "bad_weather",
+      "design_flood": true,
+      "design_flood_definition": {
+        "accepted_PMf_peak_m3s": 69632.0,
+        "hydrograph_status": "pending",
+        "note": "69,632 m3/s is the documented PMF peak value. A time-varying PMF/IDF hydrograph is still required for the hydraulic run."
+      },
+      "breach_parameters": {
+        "status": "pending",
+        "required": true
+      },
+      "downstream_boundary": {
+        "status": "pending",
+        "required": true
+      },
+      "outputs": [
+        "water_depth",
+        "flow_velocity",
+        "arrival_time",
+        "flood_extent"
+      ]
+    },
+    "S03": {
+      "name": "Design-flood routing without dam-break",
+      "category": "CWC_minimum_no_breach_design_flood",
+      "purpose": "Route the design flood downstream without dam failure for comparison with the breach case.",
+      "domain": "hirakud_to_chiplima",
+      "domain_length_km": 28.29,
+      "initial_reservoir_level_m": 192.024,
+      "initial_reservoir_level_basis": "Hirakud FRL / MWL case reference",
+      "breach": false,
+      "weather_condition": "design_flood",
+      "design_flood": true,
+      "design_flood_definition": {
+        "accepted_PMF_peak_m3s": 69632.0,
+        "hydrograph_status": "pending",
+        "note": "A complete time-varying design-flood hydrograph remains a hydraulic input."
+      },
+      "breach_parameters": {
+        "status": "not_applicable",
+        "required": false
+      },
+      "downstream_boundary": {
+        "status": "pending",
+        "required": true
+      },
+      "outputs": [
+        "water_depth",
+        "flow_velocity",
+        "arrival_time",
+        "flood_extent"
+      ]
+    },
+    "S04": {
+      "name": "Large controlled release at documented spillway capacity",
+      "category": "CWC_dam_specific_condition",
+      "purpose": "Test the downstream response to the documented total spillway discharging capacity without a dam-break.",
+      "domain": "hirakud_to_chiplima",
+      "domain_length_km": 28.29,
+      "initial_reservoir_level_m": null,
+      "initial_reservoir_level_basis": "pending hydraulic setup",
+      "breach": false,
+      "weather_condition": "dam_specific_emergency_condition",
+      "design_flood": false,
+      "spillway_capacity": {
+        "documented_total_capacity_m3s": 42450.0,
+        "hydrograph_status": "pending",
+        "interpretation": "42,450 m3/s is the documented total discharging capacity. It must not be automatically interpreted as a certified safe downstream discharge."
+      },
+      "breach_parameters": {
+        "status": "not_applicable",
+        "required": false
+      },
+      "downstream_boundary": {
+        "status": "pending",
+        "required": true
+      },
+      "outputs": [
+        "water_depth",
+        "flow_velocity",
+        "arrival_time",
+        "flood_extent"
+      ]
+    },
+    "S05": {
+      "name": "Initial reservoir-level sensitivity dam-break",
+      "category": "sensitivity_analysis",
+      "purpose": "Measure sensitivity of dam-break outputs to the adopted initial reservoir/lower-pool condition.",
+      "domain": "hirakud_to_chiplima",
+      "domain_length_km": 28.29,
+      "initial_reservoir_level_m": null,
+      "initial_reservoir_level_basis": "pending sensitivity selection",
+      "breach": true,
+      "weather_condition": "sensitivity_case",
+      "design_flood": false,
+      "inflow_hydrograph": {
+        "status": "pending",
+        "required": false
+      },
+      "breach_parameters": {
+        "status": "pending",
+        "required": true
+      },
+      "downstream_boundary": {
+        "status": "pending",
+        "required": true
+      },
+      "outputs": [
+        "water_depth",
+        "flow_velocity",
+        "arrival_time",
+        "flood_extent"
+      ]
+    }
+  },
+  "separate_analyses": {
+    "A01": {
+      "id": "A01",
+      "name": "Downstream channel capacity and safe-water-level assessment",
+      "type": "separate_hydraulic_analysis",
+      "purpose": "Assess downstream channel carrying capacity and evaluate safe water levels.",
+      "domain": "hirakud_to_chiplima",
+      "domain_length_km": 28.29,
+      "status": "pending_hydraulic_analysis",
+      "required_inputs": [
+        "hydraulic cross-sections / terrain",
+        "roughness assumptions",
+        "boundary condition",
+        "flow scenarios"
+      ],
+      "required_outputs": [
+        "channel_capacity",
+        "water_surface_elevation",
+        "safe-water-level assessment"
+      ]
+    }
+  },
+  "hydrology_constraints": {
+    "local_downstream_discharge_gauge": false,
+    "Hirakud_Reservoir_water_level": true,
+    "Deogaon_secondary_reference": true,
+    "downstream_discharge_note": "No nearby downstream CWC discharge dataset has beenretrieved for direct local calibration of theHirakud-Chiplima reach."
+  },
+  "validation": {
+    "hydraulic": [
+      "mass_conservation",
+      "physical_consistency",
+      "10km_vs_28.29km_domain_sensitivity",
+      "downstream_boundary_sensitivity",
+      "scenario_comparison"
+    ],
+    "observational": [
+      "CWC_Hirakud_Reservoir_water_levels",
+      "CWC_Deogaon_water_levels",
+      "satellite_flood_evidence_where_available"
+    ]
+  },
+  "required_inputs_pending": [
+    "time_varying design-flood hydrograph",
+    "breach geometry / breach development parameters",
+    "downstream hydraulic boundary condition",
+    "lower-pool sensitivity level",
+    "simulation duration",
+    "hydraulic roughness specification",
+    "bathymetry / channel cross-section treatment"
+  ],
+  "source_references": {
+    "CWC_dam_flood_risk_guidelines": "https://damsafety.cwc.gov.in/ecm-includes/PDFs/Guidelines_for_Mapping_Flood_Risks_Associated_with_Dams.pdf",
+    "CWC_Hirakud_dam_rehabilitation_manual": "https://damsafety.cwc.gov.in/ecm-includes/PDFs/Manual_for_Rehabilitation_of_Large_Dams.pdf",
+    "OHPC_Hirakud_dam": "https://www.ohpcltd.com/Hirakud/dam",
+    "OHPC_Hirakud_project": "https://www.ohpcltd.com/Hirakud/project"
+  },
+  "handoff": {
+    "from": "Member 2",
+    "to": "Member 1 / Hydraulic setup",
+    "provided": [
+      "28.29 km primary domain",
+      "10 km sensitivity domain",
+      "terrain DEM",
+      "CWC river polygon",
+      "CWC main path",
+      "scenario definitions",
+      "hydrology constraints",
+      "documented Hirakud reference values"
+    ],
+    "hydraulic_team_must_supply": [
+      "design-flood hydrograph",
+      "breach formulation/parameters",
+      "downstream boundary",
+      "roughness",
+      "bathymetry/channel treatment",
+      "simulation duration"
+    ]
+  }
+}

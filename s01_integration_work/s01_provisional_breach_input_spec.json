@@ -1,0 +1,16 @@
+{
+  "case": "Hirakud Dam / Mahanadi",
+  "scenario": "S01",
+  "status": "PROVISIONAL_SOLVER_FORCING_PROXY",
+  "peak_discharge_m3s": 69632.0,
+  "peak_reference": "CWC-documented Hirakud PMF peak, used only as a site-specific forcing amplitude; not a breach prediction.",
+  "peak_time_h": 6.39,
+  "shape": "q(t)=Q_peak*(t/t_peak)*exp(1-t/t_peak)",
+  "forcing_interval_s": 60.0,
+  "generated_duration_h": 48,
+  "primary_simulation_h": 24,
+  "extension_limit_h": 48,
+  "integrated_volume_24h_m3": 3870026647.32712,
+  "integrated_volume_48h_m3": 4333921803.001453,
+  "next_step": "Use this as the first far-field solver forcing. Replace with DualSPHysics Q_breach(t) once the coupled breach model is available."
+}

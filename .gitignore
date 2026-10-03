@@ -58,3 +58,28 @@ Thumbs.db
 *.zip
 *.7z
 *.rar
+
+# ============================================================
+# JalRaksha integration workspace generated/heavy artifacts
+# ============================================================
+
+# Large D-Flow FM outputs
+s01_integration_work/**/*.nc
+s01_integration_work/**/*.cache
+s01_integration_work/**/*.dia
+s01_integration_work/**/*.his
+s01_integration_work/**/*.map
+s01_integration_work/**/*.rst
+
+# Large GIS/SAR generated data
+s01_integration_work/member3_gis/gis/data/
+s01_integration_work/member3_gis/gis/output/*.tif
+s01_integration_work/member3_gis/gis/output/*.img
+
+# Generated images/previews
+s01_integration_work/**/*.png
+
+# Temporary / backup artifacts
+src/*.before_*
+src/*_backup_*
+src/*_before_*

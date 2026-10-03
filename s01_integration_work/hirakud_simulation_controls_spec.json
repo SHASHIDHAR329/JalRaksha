@@ -1,0 +1,56 @@
+{
+  "case": "Hirakud Dam / Mahanadi River",
+  "status": "PROVISIONAL_SOLVER_CONTROL_SPECIFICATION",
+  "primary_domain": {
+    "name": "hirakud_to_chiplima",
+    "length_km": 28.29
+  },
+  "time_control": {
+    "timestep_mode": "AUTOMATIC_CFL_CONTROLLED",
+    "max_courant_number": 0.7,
+    "initial_timestep_s": 1.0,
+    "maximum_timestep_s": 30.0,
+    "output_interval_s": 60.0,
+    "reference_time": "Scenario-specific t=0; all hydrographs and boundary time series referenced to this origin."
+  },
+  "simulation_horizon": {
+    "primary_duration_h": 24.0,
+    "extension_limit_h": 48.0,
+    "extension_rule": "Extend beyond 24 h when the flood-wave response, downstream boundary response, or relevant hydrograph tail has not adequately passed/stabilized within the primary domain."
+  },
+  "timestep_sensitivity": {
+    "primary_max_timestep_s": 30.0,
+    "sensitivity_max_timestep_s": 15.0,
+    "purpose": "Check whether the primary hydraulic outputs are sensitive to timestep restriction."
+  },
+  "output_products": [
+    "water_depth",
+    "depth_averaged_velocity",
+    "water_level",
+    "flood_arrival_time",
+    "maximum_depth",
+    "maximum_velocity"
+  ],
+  "boundary_dependency": {
+    "downstream_boundary": "NORMAL_DEPTH",
+    "note": "The downstream boundary condition is independent of the spatial domain length. The 28.29 km defines where the boundary is located; NORMAL_DEPTH defines the hydraulic condition imposed there."
+  },
+  "mesh_dependency": {
+    "status": "PENDING",
+    "important_rule": "The actual stable computational timestep will be determined by CFL control after the hydraulic mesh and flow speeds are established."
+  },
+  "quality_control": [
+    "Do not interpret 30 s as a guaranteed stable timestep for every future mesh or scenario.",
+    "Confirm actual CFL-limited timesteps in the solver log.",
+    "Perform the 15 s maximum-timestep sensitivity on at least the primary provisional scenario.",
+    "Extend the simulation toward 48 h if the flood response has not sufficiently passed through the domain by 24 h."
+  ],
+  "source_basis": {
+    "deltares_dflow_fm": {
+      "document": "D-Flow FM User Manual",
+      "relevant_guidance": "D-Flow FM uses CFL-based automatic timestep limitation; the manual advises a maximum Courant number of 0.7 or lower for the explicit advection scheme and describes initial and maximum timestep settings.",
+      "url": "https://content.oss.deltares.nl/delft3dfm1d2d/D-Flow_FM_User_Manual_1D2D.pdf"
+    }
+  },
+  "next_step": "Update the hydraulic input register with the finalized domain, bed, roughness, downstream-boundary and time-control specifications, then perform the final Member-2 case QA."
+}

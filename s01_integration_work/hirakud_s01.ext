@@ -1,0 +1,13 @@
+[General]
+fileVersion = 2.02
+fileType = extForce
+
+[boundary]
+quantity = dischargebnd
+locationfile = hirakud_upstream.pli
+forcingfile = hirakud_s01.bc
+
+[boundary]
+quantity = qhbnd
+locationfile = chiplima_downstream.pli
+forcingfile = hirakud_s01.bc

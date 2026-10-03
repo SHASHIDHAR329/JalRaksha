@@ -1,0 +1,22 @@
+JalRaksha Hirakud S01 Integration Checkpoint
+
+Date: 2026-10-01
+
+CP-12: PASS
+- D-Flow FM 1.2.184
+- 23,487 nodes
+- 46,025 links
+- 22,535 cells
+- Source/Sink forcing accepted
+- 30 s numerical connectivity test completed
+- Source/sink cumulative contribution: 110 m3
+- Detectable hydraulic response
+- Solver exit code: 0
+
+Important limitation:
+- Current mesh has 0 open-boundary cells and 1,910 closed-wall boundary edges.
+- Therefore this does not constitute a physical Hirakud dam-break routing case.
+- Do not run the 69,632 m3/s S01 forcing on the present closed mesh.
+
+Next checkpoint:
+CP-13 = downstream/open-boundary topology and physical S01 hydraulic formulation.

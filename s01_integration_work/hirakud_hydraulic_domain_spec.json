@@ -1,0 +1,122 @@
+{
+  "case_id": "HIRAKUD_MAHANADI_MVP",
+  "status": "MVP_HYDRAULIC_DOMAIN_CANDIDATE",
+  "case_location": {
+    "dam": "Hirakud Dam",
+    "river": "Mahanadi",
+    "state": "Odisha",
+    "district": "Sambalpur"
+  },
+  "coordinate_reference_systems": {
+    "hydraulic_analysis": "EPSG:7755",
+    "exchange": "EPSG:4326"
+  },
+  "breach_location": {
+    "source": "Corrected Hirakud dam point",
+    "longitude": 83.87527777777777,
+    "latitude": 21.534166666666668
+  },
+  "domain_candidates": {
+    "short_candidate": {
+      "name": "candidate_10km",
+      "length_km": 10.0,
+      "role": "short_domain_sensitivity_case",
+      "status": "retained"
+    },
+    "primary_mvp_candidate": {
+      "name": "hirakud_to_chiplima",
+      "length_km": 28.29,
+      "endpoint": "Chiplima river projection",
+      "cwc_parts": [
+        27,
+        25,
+        23
+      ],
+      "role": "primary_MVP_domain_candidate",
+      "status": "candidate_not_final_hydraulic_extent"
+    }
+  },
+  "geometry_sources": {
+    "dam": "Data\\Processed\\Dam\\hirakud_dam.geojson",
+    "cwc_mainpath": "Data\\Processed\\River\\hirakud_to_chiplima_cwc_mainpath.geojson",
+    "short_candidate": "Data\\Processed\\River\\candidate_10km_downstream.geojson",
+    "cwc_river_polygon": "E:\\DamBreakAI_GIS\\Processed\\River\\hirakud_mahanadi_river_polygon.geojson",
+    "terrain_dem": "E:\\DamBreakAI_DEM\\Processed\\hirakud_to_chiplima_terrain_analysis_corridor_srtm30m_7755.tif"
+  },
+  "terrain": {
+    "source": "SRTM",
+    "working_resolution_m": 30,
+    "analysis_corridor": "10 km buffer on each side of the 28.29 km main path",
+    "interpretation": "Terrain-analysis evidence only; not bathymetry and not inundation."
+  },
+  "hydrology": {
+    "water_level_dataset": "CWC Mahanadi manual water-level observations, 2021-2025",
+    "local_discharge_boundary_available": false,
+    "local_downstream_discharge_station_available": false,
+    "hirakud_reservoir_observations": 42995,
+    "hirakud_reservoir_discharge_data": false,
+    "deogaon_discharge_data": false,
+    "deogaon_role": "secondary_observational_reference",
+    "downstream_discharge_reference": "Distant CWC discharge stations exist on the broader Mahanadi network, but none is local to the Hirakud-Chiplima reach."
+  },
+  "observational_validation": {
+    "primary_local_observation": {
+      "station": "Hirakud Reservoir",
+      "data_type": "water level",
+      "discharge_available": false,
+      "use": "reservoir/initial-condition observational evidence"
+    },
+    "secondary_observation": {
+      "station": "Deogaon",
+      "data_type": "water level",
+      "discharge_available": false,
+      "use": "secondary downstream observational reference",
+      "local_to_mainpath": false
+    },
+    "local_downstream_discharge": {
+      "available": false,
+      "use": "do_not_claim_local_discharge_calibration"
+    }
+  },
+  "downstream_boundary": {
+    "type": "solver_defined_boundary",
+    "observed_discharge_boundary": false,
+    "description": "A defensible downstream boundary must be specified during hydraulic-model setup. No nearby CWC discharge observation should be presented as the local boundary.",
+    "required": [
+      "boundary elevation/condition",
+      "boundary treatment appropriate to solver",
+      "sensitivity to downstream-boundary assumptions"
+    ]
+  },
+  "scenarios": {
+    "S01": "FRL fair-weather dam-break",
+    "S02": "Design-flood adverse-condition dam-break",
+    "S03": "Design-flood routing without dam-break",
+    "S04": "Lower-pool sensitivity dam-break"
+  },
+  "validation_strategy": [
+    "mass/conservation checks",
+    "hydraulic consistency checks",
+    "sensitivity to domain length",
+    "available CWC water-level observations",
+    "secondary downstream observations where applicable",
+    "independent satellite flood evidence where suitable"
+  ],
+  "limitations": [
+    "No nearby downstream CWC discharge gauge was found for the Hirakud-Chiplima reach.",
+    "SRTM represents terrain surface and does not provide detailed channel bathymetry.",
+    "CWC network length is a GIS geometry measurement, not surveyed river chainage.",
+    "The 28.29 km Chiplima-reaching path is a computational-domain candidate and requires hydraulic sensitivity testing before being called final."
+  ],
+  "handoff_to_member_1": {
+    "provide": [
+      "primary candidate domain geometry",
+      "short 10 km sensitivity geometry",
+      "working DEM",
+      "CWC river polygon",
+      "scenario definitions",
+      "hydrology limitations",
+      "required boundary-condition decision"
+    ]
+  }
+}

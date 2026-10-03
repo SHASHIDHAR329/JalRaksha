@@ -1,0 +1,29 @@
+JalRaksha
+CP-18 MEMBER-2 FNO HEALTH CHECKPOINT
+
+STATUS: PASS
+
+Model:
+C:\JalRaksha\outputs\fno_model_physics\fno_physics_best.pt
+
+Inference:
+C:\JalRaksha\src\predict_flood.py
+
+Test inputs:
+reservoir_length_m = 1.50
+reservoir_height_m = 1.75
+peak_q_m3s = 0.62
+hydrograph_volume_m3 = 0.65
+
+Observed:
+prediction shape = 16 x 128
+device = cuda
+model = physics-aware FNO
+maximum depth = 0.2170104384 m
+mean depth = 0.2002891004 m
+
+Qualification:
+- Member-2 model loads and runs successfully.
+- This is a model-health/inference test.
+- It is not Hirakud validation.
+- Hirakud-scale discharge must not be passed directly to this laboratory-trained model without retraining or a defensible scaling/interface.

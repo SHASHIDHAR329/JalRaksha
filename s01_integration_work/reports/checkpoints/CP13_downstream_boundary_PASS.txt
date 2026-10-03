@@ -1,0 +1,36 @@
+JalRaksha Hirakud Integration
+CP-13 DOWNSTREAM BOUNDARY INTEGRATION CHECKPOINT
+
+Date: 2026-10-01
+
+STATUS: PASS
+
+Evidence:
+- D-Flow FM 1.2.184
+- Downstream candidate boundary activated
+- 16 open boundary cells
+- 16 2D boundary cells
+- Model initialization successful
+- 30 s QA simulation completed
+- 29 timesteps
+- Average timestep = 1 s
+- Setbacks = 0
+- Boundary geometry written as S01_chiplima_test.pli
+- Boundary forcing mechanism accepted as neumannbnd
+
+Qualification:
+- The QA forcing used zero water-level gradient.
+- This validates downstream boundary connectivity and solver activation.
+- The final physical NORMAL_DEPTH gradient remains to be parameterized and sensitivity-tested.
+- No physical S01 dam-break result is claimed from this QA case.
+
+NEXT:
+CP-14 / S01 hydraulic production case.
+Required before final hydraulic results:
+1. finalized breach formulation/parameters,
+2. physical downstream normal-depth parameterization,
+3. 24 h production run,
+4. CFL/timestep QA,
+5. conservation QA,
+6. 10 km vs 28.29 km sensitivity,
+7. downstream-boundary sensitivity.

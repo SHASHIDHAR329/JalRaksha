@@ -1,0 +1,55 @@
+﻿CP20 — PHYSICS + AI TRUST INTEGRATION
+STATUS: PASS — TRUST-AWARE / NO CROSS-DOMAIN COMPARISON
+
+Date: 2026-10-01
+
+PHYSICS TRACK — D-FLOW FM S01
+Status: Conditional PASS
+Simulation: 24-hour Hirakud S01 provisional far-field forcing
+Completed: Yes
+Setbacks: 0
+Time steps: adaptive 1–30 s
+Mean timestep: 14.9156 s
+Maximum depth: 36.1437 m
+Maximum velocity: 24.9496 m/s
+Final maximum depth: 34.6597 m
+Final maximum velocity: 5.4904 m/s
+Maximum absolute volume-balance error: 7.714e-05
+Negative depths: 0
+Depth NaNs: 0
+
+Qualification:
+The S01 hydraulic result is a numerical D-Flow FM result using the documented
+provisional hydrograph. It is not a physical breach prediction and is not
+calibrated against a local downstream discharge gauge.
+
+AI TRACK — MEMBER-2 FNO
+Status: PASS for trained laboratory/flume domain
+In-domain inference verified on:
+length = 1.50 m
+height = 1.75 m
+peak Q = 0.62 m3/s
+volume = 0.65 m3
+output shape = (16, 128)
+maximum predicted depth = 0.2170104384 m
+device = cuda
+
+Out-of-domain protection:
+Hirakud S01-scale inputs were rejected before FNO inference.
+
+TRAINING-DOMAIN RANGES
+length: 1.0–2.0 m
+height: 1.5–2.0 m
+peak Q: 0.54074–0.87118 m3/s
+volume: 0.5167810984–0.8387989751 m3
+
+TRUST DECISION
+1. Use D-Flow FM as the physics result for Hirakud S01.
+2. Use Member-2 FNO only for its validated laboratory/flume domain.
+3. Do not compare the FNO laboratory prediction numerically with Hirakud S01.
+4. Do not present FNO laboratory metrics as Hirakud validation metrics.
+5. The dashboard must expose this domain limitation to the user.
+
+CP20 RESULT:
+PASS — the two model tracks are integrated with an explicit domain-aware
+trust boundary and no unsupported cross-domain AI claim.

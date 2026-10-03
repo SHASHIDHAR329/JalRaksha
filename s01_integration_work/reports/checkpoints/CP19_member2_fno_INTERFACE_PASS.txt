@@ -1,0 +1,38 @@
+﻿CP19 — MEMBER-2 FNO INTERFACE
+STATUS: PASS
+
+Date: 2026-10-01
+
+Verified interface:
+FNO input channels:
+0 = normalized X coordinate
+1 = normalized Y coordinate
+2 = flume mask
+3 = normalized reservoir length
+4 = normalized reservoir height
+5 = normalized peak discharge
+6 = normalized hydrograph volume
+
+In-domain test:
+length = 1.50 m
+height = 1.75 m
+peak Q = 0.62 m3/s
+volume = 0.65 m3
+output shape = (16, 128)
+maximum predicted depth = 0.2170104384 m
+device = cuda
+
+Hirakud S01 compatibility test:
+length = 28290.0 m
+height = 192.024 m
+peak Q = 69632.0 m3/s
+volume = 3.870e9 m3
+
+Result:
+Hirakud-scale input was correctly BLOCKED before FNO inference because all four scenario scalars are outside the trained laboratory/flume ranges.
+
+Integration decision:
+Do not extrapolate the current FNO model to Hirakud.
+D-Flow FM remains the physics result for S01.
+Member-2 FNO remains available as a separately validated laboratory-domain AI component.
+No unsupported Hirakud AI accuracy claim is permitted.

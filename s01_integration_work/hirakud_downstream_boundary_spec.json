@@ -1,0 +1,46 @@
+{
+  "case": "Hirakud Dam / Mahanadi River",
+  "status": "PROVISIONAL_BOUNDARY_SPECIFICATION",
+  "location": {
+    "boundary_end": "Chiplima end of Hirakud-Chiplima main path",
+    "primary_domain": "hirakud_to_chiplima"
+  },
+  "primary_boundary": {
+    "type": "NORMAL_DEPTH",
+    "role": "PRIMARY_PROVISIONAL_DOWNSTREAM_BOUNDARY",
+    "basis": "CWC dam flood-risk modelling guidance identifies normal depth or a rating curve as common downstream boundary conditions.",
+    "implementation_note": "The normal-depth condition shall use the local downstream channel geometry, bed slope, and Manning roughness associated with the selected hydraulic geometry/roughness case."
+  },
+  "rating_curve": {
+    "status": "NOT_AVAILABLE",
+    "reason": "No nearby downstream CWC discharge dataset has been retrieved for direct local calibration of the Hirakud-Chiplima reach.",
+    "future_upgrade": "Replace or supplement the normal-depth boundary if a defensible downstream stage-discharge relationship becomes available."
+  },
+  "initial_condition": {
+    "status": "SCENARIO_DEPENDENT",
+    "note": "Initial reservoir level and initial hydraulic state must be taken from the individual scenario definition and not invented at the boundary."
+  },
+  "geometry_dependency": {
+    "channel_width_cases": {
+      "WIDTH_NARROW": 100.0,
+      "WIDTH_BASE": 320.0,
+      "WIDTH_WIDE": 610.0
+    },
+    "channel_manning_n": 0.03,
+    "note": "The downstream normal-depth calculation must use the same geometry and roughness case as the hydraulic run."
+  },
+  "limitations": [
+    "Normal depth is a provisional hydraulic boundary assumption, not an observed downstream water level.",
+    "No local downstream rating curve is available in the current dataset.",
+    "Final solver stability and sensitivity to the downstream boundary must be evaluated during hydraulic model QA."
+  ],
+  "source_references": [
+    {
+      "organization": "Central Water Commission",
+      "document": "Guidelines for Mapping Flood Risks Associated with Dams",
+      "note": "Guidance identifies normal depth or rating curve as common downstream boundary choices.",
+      "url": "https://damsafety.cwc.gov.in/ecm-includes/PDFs/Guidelines_for_Mapping_Flood_Risks_Associated_with_Dams.pdf"
+    }
+  ],
+  "next_step": "Define simulation duration, hydraulic time step, output interval, and downstream-boundary sensitivity requirements."
+}

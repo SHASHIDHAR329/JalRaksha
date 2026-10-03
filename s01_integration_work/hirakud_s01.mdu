@@ -1,0 +1,38 @@
+[General]
+Program = D-Flow FM
+Version = 1.2.184
+FileVersion = 1.09
+AutoStart = 0
+PathsRelativeToParent = 0
+
+[Geometry]
+netFile = hirakud_s01_minimum_net.nc
+waterLevIni = 128.0
+
+[Time]
+refDate = 20261001
+tUnit = S
+tStart = 0
+tStop = 86400
+dtUser = 60
+dtInit = 1
+dtMax = 30
+autoTimestep = 1
+
+[Numerics]
+CFLMax = 0.7
+AdvecType = 3
+
+[Physics]
+unifFrictCoef = 0.03
+unifFrictType = 1
+ag = 9.81
+
+[Output]
+outputDir = .
+hisInterval = 60 0 86400
+mapInterval = 60 0 86400
+mapFormat = 4
+
+[External Forcing]
+extForceFileNew = hirakud_s01.ext
